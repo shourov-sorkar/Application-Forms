@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 .title__text {
   font-family: "Bebas Neue", cursive;
@@ -11,4 +12,58 @@
   text-align: center;
   font-weight: bold;
   font-style: italic;
+}
+.form__title{
+  font-family: 'Black Ops One', cursive;
+}
+.left__side{
+  display: flex;
+  justify-content: flex-end;
+}
+.img__box{
+  height: 160px;
+  width: 160px;
+}
+#box__img{
+  border: 1px solid black;
+}
+.forms__input input{
+  border: none;
+}
+.forms__input input:focus{
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.img__box p{
+  text-align: center;
+}
+.img__box img{
+  height: 160px;
+  width: 160px;
+}
+.img__box input {
+  display:none;
+}
+.img__box label {
+  display:block;
+  text-align:center;
+  font-size:15px;
+  cursor:pointer;
+}
+.img__box img {
+  width:100%;
+  display:none;
+  margin-top:10px;
 }

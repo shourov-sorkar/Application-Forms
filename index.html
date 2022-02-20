@@ -44,18 +44,105 @@
         </div>
       </div>
       <div class="logo__group d-flex justify-content-between col-md-10 mx-auto">
-          <div class="cse__logo">
-              <img src="/img/cse.png" alt="cse logo" height="100">
-          </div>
-          <div class="iubat__logo">
-            <img src="/img/logo.png" alt="iubat logo" height="100">
+        <div class="cse__logo">
+          <img src="/img/cse.png" alt="cse logo" height="100" />
+        </div>
+        <div class="iubat__logo">
+          <img src="/img/logo.png" alt="iubat logo" height="100" />
         </div>
       </div>
       <div class="col-md-10 mx-auto">
-          <h4 class="text-center">Executive Membership form IUBAT IT Society(2021 -2022)</h4>
+        <h4 class="text-center form__title">
+          Executive Membership form IUBAT IT Society (<span id="getyear"></span
+          >-<span id="nextyear"></span>)
+        </h4>
+      </div>
+      <div class="row col-md-12 mt-5">
+        <div class="col-md-8 right__side">
+          <div class="form-group row forms__input">
+            <label class="col-sm-4 col-form-label">Position Applied for:</label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Write here...."
+              />
+            </div>
+          </div>
+          <div class="form-group row forms__input">
+            <label class="col-sm-4 col-form-label">Applicant's Name:</label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Write here...."
+              />
+            </div>
+          </div>
+          <div class="form-group row forms__input">
+            <label class="col-sm-4 col-form-label">ID #</label>
+            <div class="col-sm-8">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Write here...."
+              />
+            </div>
+          </div>
+          <div class="form-group row forms__input">
+            <label class="col-sm-4 col-form-label">Program:</label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Write here...."
+              />
+            </div>
+          </div>
+          <div class="form-group row forms__input">
+            <label class="col-sm-4 col-form-label">Current CGPA:</label>
+            <div class="col-sm-8">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Write here...."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 left__side">
+          <div class="img__box" id="box__img">
+            <label for="file-ip-1" id="img__label">Upload Image</label>
+            <input
+              type="file"
+              id="file-ip-1"
+              accept="image/*"
+              onchange="showPreview(event);"
+            />
+            <div class="preview">
+              <img id="file-ip-1-preview" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <script>
+      document.getElementById("getyear").innerHTML = new Date().getFullYear();
+      document.getElementById("nextyear").innerHTML =
+        new Date().getFullYear() + 1;
+      function showPreview(event) {
+        if (event.target.files.length > 0) {
+          var src = URL.createObjectURL(event.target.files[0]);
+          var preview = document.getElementById("file-ip-1-preview");
+          preview.src = src;
+          preview.style.display = "block";
+          document.getElementById('box__img').style.border='none';
+          document.getElementById('img__label').style.display='none';
+          return confirm('Once you Upload a Image, You Never Changed this!!');
+        }
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
