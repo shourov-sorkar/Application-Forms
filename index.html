@@ -62,11 +62,13 @@
           <div class="form-group row forms__input">
             <label class="col-sm-4 col-form-label">Position Applied for:</label>
             <div class="col-sm-8">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Write here...."
-              />
+              <select class="form-control">
+                <option selected value="0">-Select-</option>
+                <option value="1">President</option>
+                <option value="2">Vice-President</option>
+                <option value="3">General Secretery</option>
+                <option value="4">Organizing Secretery </option>
+              </select>
             </div>
           </div>
           <div class="form-group row forms__input">
@@ -112,7 +114,7 @@
         </div>
         <div class="col-md-4 left__side">
           <div class="img__box" id="box__img">
-            <label for="file-ip-1" id="img__label">Upload Image</label>
+            <label for="file-ip-1" id="img__label" class="mt-5">Photo</label>
             <input
               type="file"
               id="file-ip-1"
@@ -137,9 +139,9 @@
           var preview = document.getElementById("file-ip-1-preview");
           preview.src = src;
           preview.style.display = "block";
-          document.getElementById('box__img').style.border='none';
-          document.getElementById('img__label').style.display='none';
-          return confirm('Once you Upload a Image, You Never Changed this!!');
+          document.getElementById("box__img").style.border = "none";
+          document.getElementById("img__label").style.display = "none";
+          return confirm("Once you Upload a Image, You Never Changed this!!");
         }
       }
     </script>
